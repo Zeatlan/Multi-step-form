@@ -3,7 +3,8 @@
     <div class="box-form__progress">
 
       <div class="task" v-for="(task, key) in tasks" :key="key">
-        <div class="task__number">{{ key+1 }}</div>
+        <div class="task__number task__active" v-if="key===0">{{ key+1 }}</div>
+        <div class="task__number" v-else>{{ key+1 }}</div>
         <div class="task__text">
           <span>STEP {{ key+1 }}</span>
           <p>{{ task }}</p>
@@ -76,6 +77,12 @@ html, body {
         height: 1.5em;
         line-height: 1.5em;
         text-align: center;
+        font-weight: 700;
+      }
+
+      &__active {
+        background: color(primary, light-blue);
+        color: color(primary, marine-blue)
       }
 
       &__text {
