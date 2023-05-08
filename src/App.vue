@@ -49,12 +49,12 @@ html, body {
   display: flex;
   background-color: color(neutral, white);
   border-radius: 15px;
-  padding: 2rem;
+  padding: 1rem;
   gap: 2rem;
 
   &__progress {
     position: relative;
-    flex: 1;
+    flex: 0.7;
     background: color(primary, purplish-blue);
     display: flex;
     flex-direction: column;
