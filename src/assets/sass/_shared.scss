@@ -36,3 +36,5 @@ $font-family: 'Ubuntu', sans-serif;
 @function color($color, $tone) {
     @return map-get(map-get($palette, $color), $tone);
 }
+
+@import 'form';

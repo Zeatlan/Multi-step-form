@@ -14,12 +14,15 @@
       <NavDecoration />
 
     </div>
-    <div class="box-form__content">Lorem ipsum content</div>
+    <div class="box-form__content">
+      <GlobalInfoForm />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import NavDecoration from './components/NavDecoration.vue';
+import GlobalInfoForm from './components/GlobalInfoForm.vue';
 
 const tasks = ['Your info', 'Select plan', 'Add-ons', 'Summary'];
 </script>
@@ -45,7 +48,7 @@ html, body {
 }
 
 .box-form {
-  width: 65%;
+  width: 45%;
   display: flex;
   background-color: color(neutral, white);
   border-radius: 15px;
@@ -54,7 +57,7 @@ html, body {
 
   &__progress {
     position: relative;
-    flex: 0.7;
+    flex: 1;
     background: color(primary, purplish-blue);
     display: flex;
     flex-direction: column;
@@ -88,13 +91,14 @@ html, body {
       &__text {
         span {
           color: color(primary, pastel-blue);
-          font-size: 12px;
+          font-size: 11px;
         }
 
         p {
           margin: 3px 0 0 0;
           color: color(neutral, magnolia);
           text-transform: uppercase;
+          font-size: 14px;
           font-weight: 600;
         }
       }
